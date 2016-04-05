@@ -16,6 +16,8 @@ To run this image without docker-compose, you can pull it from the docker regist
 
     docker run -d -p 80:80 -v $(pwd)/Caddyfile:/etc/Caddyfile -v $(pwd)/public:/var/www/html zzrot/alpine-caddy
 
+The server will be available at your.docker.machine.ip.
+
 If you would like to include this image into a larger docker-compose project, simply copy the "caddy" service in our docker-compose.yml into your own compose file. Additionally exchange
 
     build: .
