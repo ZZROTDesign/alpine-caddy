@@ -1,5 +1,5 @@
 FROM alpine:edge
-MAINTAINER ZZROT LLC <zzrotdesign@gmail.com>
+MAINTAINER ZZROT LLC <docker@zzrot.com>
 
 RUN apk --no-cache add caddy
 
