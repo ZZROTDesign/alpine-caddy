@@ -24,7 +24,7 @@ If you would like to include this image into a larger docker-compose project, si
 
 with
 
-		image: zzrot/alpine-caddy
+    image: zzrot/alpine-caddy
 
 
 ## Contributing to Alpine-Caddy
