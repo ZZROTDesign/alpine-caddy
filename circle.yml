@@ -4,8 +4,8 @@ machine:
 
 test:
   override:
-    - docker build -t alpine-caddy .
-    - docker run alpine-caddy
+    - docker-compose build
+    - docker-compose up -d
 
 
 deployment:
