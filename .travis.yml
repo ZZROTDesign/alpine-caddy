@@ -36,5 +36,5 @@ script:
 after_success:
   - echo "Test code here again"
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      curl -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "master"}' -X POST $DOCKER_TRIGGER
+      curl -s -X POST -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "master"}'  $DOCKER_TRIGGER;
     fi
