@@ -32,5 +32,8 @@ script:
   - docker-compose version
   - docker ps | grep -q caddy
 
-after_success:
-  - upload.sh
+deploy:
+  provider: script
+  script: curl -s -X POST -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "master"}'  $DOCKER_TRIGGER;
+  on:
+  	branch: develop
