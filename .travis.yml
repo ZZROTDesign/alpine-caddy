@@ -34,5 +34,3 @@ script:
 
 after_success:
   - upload.sh
-  - echo $TRAVIS_BRANCH
-  - echo $DOCKER_TRIGGER
