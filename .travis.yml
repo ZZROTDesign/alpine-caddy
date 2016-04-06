@@ -34,6 +34,6 @@ script:
 
 deploy:
   provider: script
-  script: curl -s -X POST -H "Content-Type: application/json" --data '{"source_type": "Branch", "source_name": "master"}'  $DOCKER_TRIGGER;
+  script: ./deploy.sh
   on:
   	branch: develop
