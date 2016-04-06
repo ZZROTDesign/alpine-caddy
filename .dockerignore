@@ -2,4 +2,4 @@ LICENSE*
 README*
 .git
 .dockerignore
-circle.yml
+.travis.yml
