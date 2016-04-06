@@ -36,4 +36,4 @@ deploy:
   provider: script
   script: deploy.sh
   on:
-  	branch: develop
+    branch: develop
