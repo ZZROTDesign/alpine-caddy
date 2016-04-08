@@ -1,3 +1,8 @@
+
+branches:
+  except:
+    - /v\d+\.\d+[a-z]/
+
 sudo: required
 
 language: go
@@ -31,10 +36,3 @@ script:
   - docker version
   - docker-compose version
   - docker ps | grep -q caddy
-
-deploy:
-  provider: script
-  script: ./deploy.sh
-  on:
-    tags: true
-    all_branches: true
