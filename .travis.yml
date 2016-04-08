@@ -36,5 +36,5 @@ deploy:
   provider: script
   script: ./deploy.sh
   on:
-    branch: master
     tags: true
+    all_branches: true
