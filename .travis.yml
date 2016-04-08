@@ -1,7 +1,7 @@
 
 branches:
   except:
-    - /v\d+\.\d+[a-z]/
+    - /v\d+\.\d+\.d+/
 
 sudo: required
 
