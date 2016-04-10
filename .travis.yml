@@ -1,8 +1,3 @@
-
-branches:
-  except:
-    - /v\d+\.\d+\.d+/
-
 sudo: required
 
 language: go
@@ -14,6 +9,10 @@ env:
     global:
         - DOCKER_VERSION=1.10.1-0~trusty
         - DOCKER_COMPOSE_VERSION=1.6.0
+
+branches:
+  except:
+    - /v\d+\.\d+\.d+/
 
 before_install:
     # list docker-engine versions
@@ -36,3 +35,5 @@ script:
   - docker version
   - docker-compose version
   - docker ps | grep -q caddy
+
+  #TODO: Work on a custom script that tests connection, etc.
