@@ -5,5 +5,4 @@
       ports:
         -   80:80
       volumes:
-        -   ./Caddyfile:/etc/Caddyfile
         -   ./public:/var/www/html
