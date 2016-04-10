@@ -12,7 +12,7 @@ env:
 
 branches:
   except:
-    - /v\d+\.\d+\.d+/
+    - /^v\d/
 
 before_install:
     # list docker-engine versions
