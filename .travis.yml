@@ -36,4 +36,8 @@ script:
   - docker-compose version
   - docker ps | grep -q caddy
 
+notifications:
+  email:
+    on_success: never
+
   #TODO: Work on a custom script that tests connection, etc.
