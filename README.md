@@ -8,24 +8,23 @@ This is a [Docker](https://www.docker.com/) image for [Caddyserver](https://cadd
 ## Usage
 We recommend using our images in conjunction with [Docker-Compose](https://docs.docker.com/compose/). This allows for easier creation of containers with the proper volumes and ports enabled.
 
-We have included a docker-compose.yml as an example for this image. To run this container as standalone with docker-compose:
+We have included an [example docker-compose](/docker-compose.example.yml) file for use in a real project.
 
-    docker-compose build
-    docker-compose up -d
+This image works with two defaults
+1. A default [Caddyfile](/Caddyfile)
+2. A default location inside the container for static files: /var/www/html
 
-To run this image without docker-compose, you can pull it from the docker registry by running:
+In order to use this image, we recommend running it with a volume connecting your static files to the root location of the docker file:
 
-    docker run -d -p 80:80 -v $(pwd)/Caddyfile:/etc/Caddyfile -v $(pwd)/public:/var/www/html zzrot/alpine-caddy
+    docker run -d -p 80:80 -v $(pwd)/public:/var/www/html zzrot/alpine-caddy
 
 The server will be available at your.docker.machine.ip.
 
-If you would like to include this image into a larger docker-compose project, simply copy the "caddy" service in our docker-compose.yml into your own compose file. Additionally exchange
+This is the bare minimum needed to use this image. Although further customization is made easier with a docker-compose file.
 
-    build: .
+The benefits of building an image with a overrideable Caddyfile are that you can   include your own by including another volume. To see a fully configured docker-compose file see this [example](/docker-compose.example.yml).
 
-with
-
-    image: zzrot/alpine-caddy
+For writing a custom Caddyfile please read [this](https://caddyserver.com/docs/caddyfile).
 
 
 ## Contributing to Alpine-Caddy
@@ -58,3 +57,7 @@ If you discover a security issue in this Docker image, please report it by sendi
 This will allow us to assess the risk, and make a fix available before we add a bug report to the GitHub repository.
 
 Thanks for helping make this image safe for everyone!
+
+### License
+
+The code is available under the [MIT License](/LICENSE).
