@@ -27,6 +27,11 @@ before_install:
     - chmod +x docker-compose
     - sudo mv docker-compose /usr/local/bin
 
+    #Install Bats Testing Framework
+    - sudo add-apt-repository ppa:duggan/bats --yes
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq bats
+
 install:
   - docker-compose build
   - docker-compose up -d
@@ -34,10 +39,8 @@ install:
 script:
   - docker version
   - docker-compose version
-  - docker ps | grep -q caddy
+  - bats test/caddy.bats
 
 notifications:
   email:
     on_success: never
-
-  #TODO: Work on a custom script that tests connection, etc.
