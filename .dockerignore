@@ -3,3 +3,10 @@ README*
 .git
 .dockerignore
 .travis.yml
+public/
+.imdone
+.gitignore
+CONTRIBUTING.md
+docker-compose.yml
+docker-compose.example.yml
+SECURITY.md
