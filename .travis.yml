@@ -39,7 +39,7 @@ install:
 script:
   - docker version
   - docker-compose version
-  - bats test/caddy.bats
+  - bats tests/caddy.bats
 
 notifications:
   email:
