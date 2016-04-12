@@ -10,3 +10,4 @@ CONTRIBUTING.md
 docker-compose.test.yml
 docker-compose.example.yml
 SECURITY.md
+tests/
