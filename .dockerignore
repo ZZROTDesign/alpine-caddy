@@ -7,7 +7,7 @@ public/
 .imdone
 .gitignore
 CONTRIBUTING.md
-docker-compose.test.yml
+docker-compose.travis.yml
 docker-compose.example.yml
 SECURITY.md
 tests/
