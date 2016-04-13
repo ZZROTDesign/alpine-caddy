@@ -8,6 +8,6 @@ public/
 .gitignore
 CONTRIBUTING.md
 docker-compose.travis.yml
-docker-compose.example.yml
 SECURITY.md
 tests/
+examples/
