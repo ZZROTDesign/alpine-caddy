@@ -11,6 +11,7 @@ We recommend using our images in conjunction with [Docker-Compose](https://docs.
 We have included an [example docker-compose](/examples/docker-compose.example.yml) file for use in a real project.
 
 This image works with two defaults
+
 1. A default [Caddyfile](/Caddyfile)
 2. A default location inside the container for static files: /var/www/html
 
