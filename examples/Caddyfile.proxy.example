@@ -1,0 +1,34 @@
+##Example Caddyfile config for a reverse proxy
+
+www.example.com, example.com {
+
+				proxy / example-container:80 {#This is the name of your container
+					proxy_header Host {host}
+					proxy_header X-Real-IP {remote}
+					proxy_header X-Forwarded-Proto {scheme}
+				}
+
+				header / {
+					#Include any headers for your site here
+				}
+
+				gzip
+
+				tls example@example.com #Your email for Let's Encrypt Verification
+}
+
+blog.example.com {
+			proxy / blog-container:2368 {
+				proxy_header Host {host}
+				proxy_header X-Real-IP {remote}
+				proxy_header X-Forwarded-Proto {scheme}
+			}
+
+			header / {
+				#Include any headers for your site here
+			}
+
+			gzip
+
+			tls example@example.com #Your email for Let's Encrypt Verification
+}
