@@ -26,6 +26,12 @@ The benefits of building an image with a overrideable Caddyfile are that you can
 
 For writing a custom Caddyfile please read [this](https://caddyserver.com/docs/caddyfile).
 
+### Caddy as a reverse
+
+This image can also effectively be used as a reverse proxy. Included in the examples/ folder is an [example Caddyfile](/examples/Caddyfile.proxy.example).
+
+The [example docker-compose](/examples/docker-compose.proxy-example.yml) shows how to include your custom Caddyfile as a volume as well as an example proxy set up with containers. 
+
 
 ## Contributing to Alpine-Caddy
 
