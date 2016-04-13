@@ -2,7 +2,7 @@
 
 www.example.com, example.com {
 
-				proxy / example-container:80 {#This is the name of your container
+				proxy / example-server:80 {#This is the name of your container
 					proxy_header Host {host}
 					proxy_header X-Real-IP {remote}
 					proxy_header X-Forwarded-Proto {scheme}
@@ -18,7 +18,7 @@ www.example.com, example.com {
 }
 
 blog.example.com {
-			proxy / blog-container:2368 {
+			proxy / example-blog:2368 {
 				proxy_header Host {host}
 				proxy_header X-Real-IP {remote}
 				proxy_header X-Forwarded-Proto {scheme}

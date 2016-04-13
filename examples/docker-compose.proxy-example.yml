@@ -1,0 +1,31 @@
+version: '2'
+services:
+  proxy:
+    image: zzrot/alpine-caddy
+    ports:
+      -   80:80
+    volumes:
+      -   ./Caddyfile:/etc/Caddyfile
+      -   ./.caddy:/root/.caddy
+    networks:
+      - frontend
+
+  example-server:
+      image: zzrot/alpine-caddy
+      expose:
+        -   80
+      volumes:
+        -   ./public:/var/www/html
+      networks:
+        - frontend
+
+  example-blog:
+      image: zzrot/alpine-ghost
+      expose:
+        - 2368
+      networks:
+        - frontend
+
+
+networks:
+    frontend:
