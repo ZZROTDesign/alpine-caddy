@@ -1,7 +1,6 @@
 # Caddy Server on Alpine Linux
 
-[![](https://badge.imagelayers.io/zzrot/alpine-caddy:latest.svg)](https://imagelayers.io/?images=zzrot/alpine-caddy:latest 'Get your own badge on imagelayers.io')
-[![Build Status](https://travis-ci.org/ZZROTDesign/alpine-caddy.svg?branch=master)](https://travis-ci.org/ZZROTDesign/alpine-caddy)
+[![](https://badge.imagelayers.io/zzrot/alpine-caddy:latest.svg)](https://imagelayers.io/?images=zzrot/alpine-caddy:latest 'Get your own badge on imagelayers.io') [![Build Status](https://travis-ci.org/ZZROTDesign/alpine-caddy.svg?branch=master)](https://travis-ci.org/ZZROTDesign/alpine-caddy) [![Docker Pulls](https://img.shields.io/docker/pulls/zzrot/alpine-caddy.svg?maxAge=2592000)](https://hub.docker.com/r/zzrot/alpine-caddy/)
 
 This is a [Docker](https://www.docker.com/) image for [Caddyserver](https://caddyserver.com/). This image runs with a base of [Alpine-Linux](http://www.alpinelinux.org/) making it extremely small, secure and fast.
 
