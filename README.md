@@ -10,11 +10,11 @@ This image can also be found on [Docker Hub](https://hub.docker.com/r/zzrot/alpi
 ## Usage
 We recommend using our images in conjunction with [Docker-Compose](https://docs.docker.com/compose/). This allows for easier creation of containers with the proper volumes and ports enabled.
 
-We have included an [example docker-compose](/examples/docker-compose.example.yml) file for use in a real project.
+We have included an [example docker-compose](https://github.com/ZZROTDesign/alpine-caddy/examples/docker-compose.example.yml) file for use in a real project.
 
 This image works with two defaults
 
-1. A default [Caddyfile](/Caddyfile)
+1. A default [Caddyfile](https://github.com/ZZROTDesign/alpine-caddy/Caddyfile)
 2. A default location inside the container for static files: /var/www/html
 
 In order to use this image, we recommend running it with a volume connecting your static files to the root location of the docker file:
@@ -25,15 +25,15 @@ The server will be available at your.docker.machine.ip.
 
 This is the bare minimum needed to use this image. Although further customization is made easier with a docker-compose file.
 
-The benefits of building an image with a overrideable Caddyfile are that you can   include your own by including another volume. To see a fully configured docker-compose file see this [example](/examples/docker-compose.example.yml).
+The benefits of building an image with a overrideable Caddyfile are that you can   include your own by including another volume. To see a fully configured docker-compose file see this [example](https://github.com/ZZROTDesign/alpine-caddy/examples/docker-compose.example.yml).
 
 For writing a custom Caddyfile please read [this](https://caddyserver.com/docs/caddyfile).
 
 ### Caddy as a reverse proxy
 
-This image can also effectively be used as a reverse proxy. Included in the examples/ folder is an [example Caddyfile](/examples/Caddyfile.proxy.example).
+This image can also effectively be used as a reverse proxy. Included in the examples/ folder is an [example Caddyfile](https://github.com/ZZROTDesign/alpine-caddy/examples/Caddyfile.proxy.example).
 
-The [example docker-compose](/examples/docker-compose.proxy-example.yml) shows how to include your custom Caddyfile as a volume as well as an example proxy set up with containers.
+The [example docker-compose](https://github.com/ZZROTDesign/alpine-caddy/examples/docker-compose.proxy-example.yml) shows how to include your custom Caddyfile as a volume as well as an example proxy set up with containers.
 
 ## Volumes
 
@@ -50,6 +50,7 @@ For docker-compose.yml files, under the volumes declaration, include:
 or
 
     docker run -v $(pwd)/public:/var/www/html
+
 ### Custom Caddyfile
 
 To upload a custom Caddyfile, link your Caddyfile to the directory /etc/Caddyfile in the container.
@@ -61,14 +62,13 @@ or
 
     docker run -v $(pwd)/Caddyfile:/etc/Caddyfile zzrot/alpine-caddy
 
-
 ### Certificate Persistance
 
 If you use alpine-caddy to generate SSL certificates from [Let's Encrypt](https://letsencrypt.org/), you should persist those certificates outside of the container. In the instance of a container failure, this allows the container to reuse the same certificates, instead of generating new ones from Let's Encrypt.
 
 For information on including this into your Caddyfile see the [Caddyfile tls specification](https://caddyserver.com/docs/tls).
 
-The certificates are stored in /root/.caddy inside of the container, and thus you must connect an outside directory to that directory to allow persistance.For docker-compose.yml files, under the volumes declaration, include:
+The certificates are stored in /root/.caddy inside of the container, and thus you must connect an outside directory to that directory to allow persistance. For docker-compose.yml files, under the volumes declaration, include:
 
     -  ./.caddy:/root/.caddy
 
@@ -109,4 +109,4 @@ Thanks for helping make this image safe for everyone!
 
 ### License
 
-The code is available under the [MIT License](/LICENSE).
+The code is available under the [MIT License](https://github.com/ZZROTDesign/alpine-caddy/LICENSE).
