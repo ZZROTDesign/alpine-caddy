@@ -35,6 +35,46 @@ This image can also effectively be used as a reverse proxy. Included in the exam
 
 The [example docker-compose](/examples/docker-compose.proxy-example.yml) shows how to include your custom Caddyfile as a volume as well as an example proxy set up with containers.
 
+## Volumes
+
+Alpine-Caddy has three locations where volumes can be linked to.
+
+### Static Files
+
+In order to serve static content, alpine-caddy needs to be able to access your static files from inside of the container. To do this, link the directory of your static files with /var/www/html inside of the container.
+
+For docker-compose.yml files, under the volumes declaration, include:
+
+    -  ./public:/var/www/html
+
+or
+
+    docker run -v $(pwd)/public:/var/www/html
+### Custom Caddyfile
+
+To upload a custom Caddyfile, link your Caddyfile to the directory /etc/Caddyfile in the container.
+For docker-compose.yml files, under the volumes declaration, include:
+
+    -  ./Caddyfile:/etc/Caddyfile
+
+or
+
+    docker run -v $(pwd)/Caddyfile:/etc/Caddyfile zzrot/alpine-caddy
+
+
+### Certificate Persistance
+
+If you use alpine-caddy to generate SSL certificates from [Let's Encrypt](https://letsencrypt.org/), you should persist those certificates outside of the container. In the instance of a container failure, this allows the container to reuse the same certificates, instead of generating new ones from Let's Encrypt.
+
+For information on including this into your Caddyfile see the [Caddyfile tls specification](https://caddyserver.com/docs/tls).
+
+The certificates are stored in /root/.caddy inside of the container, and thus you must connect an outside directory to that directory to allow persistance.For docker-compose.yml files, under the volumes declaration, include:
+
+    -  ./.caddy:/root/.caddy
+
+or
+
+    docker run -v $(pwd)/.caddy:/root/.caddy
 
 ## Contributing to Alpine-Caddy
 
