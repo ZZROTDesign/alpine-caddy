@@ -5,3 +5,5 @@ root /var/www/html
 log stdout
 
 errors stdout
+
+ext .html .htm .php
