@@ -1,5 +1,9 @@
 #!/usr/bin/env bats
 
+@test "Build Test Docker Container" {
+	run docker-compose -f docker-compose.travis.yml up -d --build
+}
+
 @test "It should respond with HTTP 200 Okay" {
 	run curl --write-out "%{http_code}\n" --silent --output /dev/null 127.0.0.1
 	[[ "$output" =~ "200" ]]
