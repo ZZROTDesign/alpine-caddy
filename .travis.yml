@@ -20,6 +20,8 @@ before_install:
 - sudo add-apt-repository ppa:duggan/bats --yes
 - sudo apt-get update -qq
 - sudo apt-get install -qq bats
+install:
+- docker-compose -f docker-compose.travis.yml build
 script:
 - docker version
 - docker-compose version

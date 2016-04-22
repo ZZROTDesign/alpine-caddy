@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
-@test "Build Test Docker Container" {
-	run docker-compose -f docker-compose.travis.yml up -d --build
+@test "Run Test Docker Container" {
+	run docker-compose -f docker-compose.travis.yml up -d
 }
 
 @test "It should respond with HTTP 200 Okay" {
