@@ -9,8 +9,9 @@
 	[[ "$output" =~ "0.8.2" ]]
 }
 
-@test "Build Standard Container" {
-	skip
+@test "Caddy Should Be The User" {
+	run docker run alpinecaddy_caddy whoami
+	[[ "$output" =~ "caddy" ]]
 }
 
 @test "It should respond with HTTP 200 Okay" {
