@@ -25,11 +25,23 @@
 }
 
 @test "Build Proxy Container" {
+	skip "Waiting on Caddy v.9 for testing ssl"
+}
+
+@test "Proxies to container 1" {
+	skip
+}
+
+@test "Proxies to container 2" {
+	skip
+}
+
+@test "Proxies to container 3" {
 	skip
 }
 
 @test "SSL Certificates" {
-	skip
+	skip ""
 }
 
 @test "Force Headers" {
