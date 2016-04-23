@@ -10,6 +10,7 @@
 }
 
 @test "Caddy Should Be The User" {
+	skip
 	run docker run alpinecaddy_caddy whoami
 	[[ "$output" =~ "caddy" ]]
 }
