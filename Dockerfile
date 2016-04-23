@@ -6,6 +6,7 @@ RUN apk --no-cache add caddy tini
 #Copy over a default Caddyfile
 COPY ./Caddyfile /etc/Caddyfile
 
+USER caddy
 
 ENTRYPOINT ["tini"]
 
