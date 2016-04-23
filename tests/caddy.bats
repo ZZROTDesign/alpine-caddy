@@ -5,8 +5,8 @@
 }
 
 @test "Caddy should be version v0.8.2"{
-	run docker run caddy caddy --version
-	[[ "$output" =~ "v0.8.2"]]
+	run docker run alpinecaddy_caddy caddy --version
+	[[ "$output" =~ "0.8.2"]]
 }
 
 @test "Build Standard Container" {
