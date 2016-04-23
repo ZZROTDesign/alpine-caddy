@@ -20,6 +20,7 @@ before_install:
 - sudo add-apt-repository ppa:duggan/bats --yes
 - sudo apt-get update -qq
 - sudo apt-get install -qq bats
+- curl -s https://raw.githubusercontent.com/ZZROTDesign/docker-clean/master/docker-clean | sudo tee /usr/local/bin/docker-clean > /dev/null && sudo chmod +x /usr/local/bin/docker-clean
 install:
 - docker-compose -f docker-compose.travis.yml build
 script:
