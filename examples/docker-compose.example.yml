@@ -1,10 +1,10 @@
-  version: '2'
-  services:
+version: '2'
+services:
     web:
-      image: zzrot/alpine-caddy
-      ports:
-        -   80:80
-      volumes:
-        -   ./Caddyfile:/etc/Caddyfile
-        -   ./public:/var/www/html
-        -   ./.caddy:/root/.caddy
+        image: zzrot/alpine-caddy
+        ports:
+            -   80:80
+        volumes:
+            -   ./Caddyfile:/etc/Caddyfile
+            -   ./public:/var/www/html
+            -   ./.caddy:/root/.caddy
