@@ -14,16 +14,3 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
-
-[{package,bower}.json]
-indent_style = space
-indent_size = 2
-
-[{.eslintrc,.scss-lint.yml}]
-indent_style = space
-indent_size = 2
-
-
-[*.{scss,sass}]
-indent_style = space
-indent_size = 2
