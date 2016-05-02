@@ -28,6 +28,10 @@ The benefits of building an image with a overrideable Caddyfile are that you can
 
 For writing a custom Caddyfile please read [this](https://caddyserver.com/docs/caddyfile).
 
+### Middleware
+
+Alpine-Caddy includes all Caddy Middleware and features. You can read more on these specific features in the [Caddy User Guide](https://caddyserver.com/docs).
+
 ### Caddy as a reverse proxy
 
 This image can also effectively be used as a reverse proxy. Included in the examples/ folder is an [example Caddyfile](https://github.com/ZZROTDesign/alpine-caddy/examples/Caddyfile.proxy.example).
@@ -79,8 +83,8 @@ or
 
 ### Team members
 
-* [Sean Kilgarriff](https://github.com/Skilgarriff) sean@zzrot.com  
-* [Killian Brackey](https://github.com/killianbrackey) killian@zzrot.com
+* [Sean Kilgarriff](https://github.com/Skilgarriff) sean@zzrot.com T: [@seankilgarriff](https://twitter.com/SeanKilgarriff)
+* [Killian Brackey](https://github.com/killianbrackey) killian@zzrot.com T: [@kmbrackey](https://twitter.com/kmbrackey)
 
 Don't hesitate to get in contact with either one of us with problems, questions, etc.
 
