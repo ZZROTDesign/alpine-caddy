@@ -1,7 +1,8 @@
 FROM alpine:edge
 MAINTAINER ZZROT LLC <docker@zzrot.com>
 
-RUN apk --no-cache add tini git --virtual devs tar curl
+RUN apk --no-cache add tini git \
+    && apk --no-cache add --virtual devs tar curl
 
 #Install Caddy Server, and All Middleware
 RUN curl "https://caddyserver.com/download/build?os=linux&arch=amd64&features=cors,git,hugo,ipfilter,jsonp,jwt,mailout,prometheus,realip,search,upload" \
