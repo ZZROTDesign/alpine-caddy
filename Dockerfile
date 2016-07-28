@@ -16,6 +16,6 @@ COPY ./Caddyfile /etc/Caddyfile
 
 #USER caddy
 
-ENTRYPOINT ["tini"]
+ENTRYPOINT ["/sbin/tini"]
 
 CMD ["caddy", "--conf", "/etc/Caddyfile"]
