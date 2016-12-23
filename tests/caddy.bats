@@ -4,9 +4,9 @@
 	run docker-compose -f docker-compose.travis.yml up -d
 }
 
-@test "Caddy should be version v0.9.1" {
+@test "Caddy should be version v0.9.4" {
 	run docker run alpinecaddy_caddy caddy --version
-	[[ "$output" =~ "0.9.3" ]]
+	[[ "$output" =~ "0.9.4" ]]
 }
 
 @test "Caddy Should Be The User" {
